@@ -1,0 +1,111 @@
+.sf-block {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sf-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--dimmer);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sf-label-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.sf-field {
+  margin-bottom: 10px;
+}
+
+.sf-field label {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+  letter-spacing: .04em;
+}
+
+.sf-field input,
+.sf-field select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.sf-field input:focus,
+.sf-field select:focus {
+  border-color: var(--cyan-dim);
+  box-shadow: 0 0 0 3px var(--cyan-glow);
+}
+
+.sf-field input::placeholder { color: var(--dimmer) }
+.sf-field input:disabled,
+.sf-field select:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.sf-field select { cursor: pointer }
+.sf-field select option { background: var(--surface2) }
+
+.sf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sf-btn {
+  width: 100%;
+  padding: 9px 14px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  transition: all .2s;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.sf-btn-start {
+  background: var(--cyan-dim);
+  color: #fff;
+}
+.sf-btn-start:hover {
+  background: var(--cyan);
+  color: #0D1117;
+  transform: translateY(-1px);
+}
+
+.sf-btn-stop {
+  background: rgba(255,68,68,.1);
+  color: var(--crit);
+  border: 1px solid rgba(255,68,68,.25);
+}
+.sf-btn-stop:hover {
+  background: rgba(255,68,68,.18);
+}
